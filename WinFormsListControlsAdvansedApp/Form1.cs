@@ -30,6 +30,17 @@ namespace WinFormsListControlsAdvansedApp
             tula.Nodes.AddRange(new[] { aleksin, belev });
 
 
+            CheckBox chkBrasil = new CheckBox();
+            chkBrasil.Text = "";
+            chkBrasil.ImageList = imgList;
+            chkBrasil.ImageIndex = 2;
+
+            chkBrasil.Location = new Point(142, 492);
+            chkBrasil.Size = new Size(79, 64);
+
+            this.Controls.Add(chkBrasil);
+
+
         }
 
         private void chkListLangs_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,6 +65,21 @@ namespace WinFormsListControlsAdvansedApp
                 selectNode.Collapse();
             else
                 selectNode.Expand();
+        }
+
+        private void btnLargeIcons_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.LargeIcon;
+        }
+
+        private void btnSmallIcons_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.SmallIcon;
+        }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            listView1.View = View.Details;
         }
     }
 }
